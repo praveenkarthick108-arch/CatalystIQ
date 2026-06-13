@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json",
+  "version": "v1.4",
+  "name": "CatalystIQ",
+  "description": "Enterprise AI Transformation Copilot — guides employees through AI readiness assessment, personalized upskilling roadmaps, and responsible AI governance. Powered by Work IQ and Microsoft 365 Copilot.",
+  "instructions": "You are CatalystIQ, an enterprise AI transformation copilot. Your purpose is to help employees understand their AI readiness across four dimensions (Technology, People, Process, Governance), identify their top gaps, and create a personalized 30/60/90 day transformation roadmap. You always ground your recommendations in the organization's SharePoint knowledge base and cite your sources. You follow Microsoft's Responsible AI principles and escalate governance concerns to the AI Center of Excellence. You are encouraging, not judgmental, and you adapt your guidance to the user's specific role and department.",
+  "conversation_starters": [
+    {
+      "title": "Assess my AI readiness",
+      "text": "I want to take the AI readiness assessment and find out where I stand."
+    },
+    {
+      "title": "Show my roadmap",
+      "text": "Show me my personalized AI transformation roadmap."
+    },
+    {
+      "title": "Run a Responsible AI audit",
+      "text": "I want to run a Responsible AI audit on an AI use case my team is evaluating."
+    },
+    {
+      "title": "Weekly check-in",
+      "text": "I want to do my weekly AI progress check-in."
+    },
+    {
+      "title": "Find learning resources",
+      "text": "What AI training resources are recommended for my role?"
+    },
+    {
+      "title": "Escalate to AI CoE",
+      "text": "I need to escalate an AI governance question to the AI Center of Excellence."
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "WebSearch",
+      "enabled": false
+    },
+    {
+      "name": "OneDriveAndSharePoint",
+      "enabled": true,
+      "items_by_sharepoint_ids": [
+        {
+          "site_id": "{{SHAREPOINT_SITE_ID}}",
+          "web_id": "{{SHAREPOINT_WEB_ID}}",
+          "list_id": "{{SHAREPOINT_DOCUMENTS_LIST_ID}}"
+        }
+      ]
+    },
+    {
+      "name": "GraphConnectors",
+      "enabled": false
+    }
+  ],
+  "actions": [
+    {
+      "id": "catalystiq_assessment",
+      "file": "ai-plugin.json"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "version": "1.0.0",
+  "id": "catalystiq-enterprise-ai-transformation",
+  "developer": {
+    "name": "Prodapt Solutions",
+    "websiteUrl": "https://github.com/praveenkarthick108-arch/CatalystIQ",
+    "privacyUrl": "https://github.com/praveenkarthick108-arch/CatalystIQ/blob/main/docs/privacy-policy.md",
+    "termsOfUseUrl": "https://github.com/praveenkarthick108-arch/CatalystIQ/blob/main/LICENSE"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "CatalystIQ",
+    "full": "CatalystIQ — Enterprise AI Transformation Copilot"
+  },
+  "description": {
+    "short": "AI readiness assessment + personalized transformation roadmaps",
+    "full": "CatalystIQ helps enterprise employees understand their AI readiness, identify skill gaps across Technology, People, Process, and Governance dimensions, and receive a personalized 30/60/90 day transformation roadmap. Powered by Work IQ and Microsoft 365 Copilot, grounded in your organization's SharePoint knowledge base."
+  },
+  "accentColor": "#0078D4",
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "CatalystIQ",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  },
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "copilotstudio.microsoft.com",
+    "make.powerautomate.com"
+  ]
+}
